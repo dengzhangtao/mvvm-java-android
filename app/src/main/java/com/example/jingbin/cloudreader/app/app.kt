@@ -28,6 +28,6 @@ open class App : RootApplication() {
 //        }
 //        LeakCanary.install(this);
 //        HttpUtils.getInstance().init(this);
-        CrashReport.initCrashReport(applicationContext, "3977b2d86f", BuildConfig.DEBUG)
+        CrashReport.initCrashReport(applicationContext, "49bb40859b", BuildConfig.DEBUG)
     }
 }
