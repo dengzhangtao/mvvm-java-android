@@ -8,15 +8,11 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_my_collect"
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
+            style="@style/tabLayoutStyle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tabBackground="?android:attr/selectableItemBackground"
-            app:tabIndicatorColor="@color/colorTheme"
-            app:tabMode="scrollable"
-            app:tabSelectedTextColor="@color/colorTheme"
-            app:tabTextColor="@color/colorTabText" />
+            app:tabGravity="fill"
+            app:tabMaxWidth="0dp" />
 
         <View
             android:id="@+id/view_line"
