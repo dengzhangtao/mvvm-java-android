@@ -40,6 +40,11 @@ public class NavAdmireActivity extends BaseActivity<NoViewModel, ActivityNavAdmi
         bindingView.ivAlipay.setOnClickListener(v -> saveImage(v, ConstantsImageUrl.ADMIRE_ALIPAY));
     }
 
+    @Override
+    public Class<NoViewModel> getViewModelClass() {
+        return NoViewModel.class;
+    }
+
     private void saveImage(View v, String url) {
         DialogBuild.showCustom(v, "是否保存图片到本地?", "保存", new DialogInterface.OnClickListener() {
             @Override

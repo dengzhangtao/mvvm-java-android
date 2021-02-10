@@ -32,6 +32,11 @@ public class NavDownloadActivity extends BaseActivity<NoViewModel, ActivityNavDo
         });
     }
 
+    @Override
+    public Class<NoViewModel> getViewModelClass() {
+        return NoViewModel.class;
+    }
+
     public static void start(Context mContext) {
         Intent intent = new Intent(mContext, NavDownloadActivity.class);
         mContext.startActivity(intent);

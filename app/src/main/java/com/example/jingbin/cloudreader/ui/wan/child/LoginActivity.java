@@ -28,6 +28,11 @@ public class LoginActivity extends BaseActivity<LoginViewModel, ActivityLoginBin
         bindingView.setViewModel(viewModel);
     }
 
+    @Override
+    public Class<LoginViewModel> getViewModelClass() {
+        return LoginViewModel.class;
+    }
+
     public void register(View view) {
         viewModel.register().observe(this, this::loadSuccess);
     }

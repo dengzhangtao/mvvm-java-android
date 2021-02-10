@@ -38,6 +38,11 @@ public class MyCollectActivity extends BaseActivity<NoViewModel, ActivityMyColle
         showContentView();
     }
 
+    @Override
+    public Class<NoViewModel> getViewModelClass() {
+        return NoViewModel.class;
+    }
+
     private void initFragmentList() {
         mTitleList.clear();
         mTitleList.add("文章");

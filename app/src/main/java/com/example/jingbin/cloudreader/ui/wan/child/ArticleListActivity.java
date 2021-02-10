@@ -34,6 +34,11 @@ public class ArticleListActivity extends BaseActivity<WanAndroidListViewModel, F
         loadData();
     }
 
+    @Override
+    public Class<WanAndroidListViewModel> getViewModelClass() {
+        return WanAndroidListViewModel.class;
+    }
+
     private void getIntentData() {
         cid = getIntent().getIntExtra("cid", 0);
         String chapterName = getIntent().getStringExtra("chapterName");

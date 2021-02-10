@@ -96,6 +96,11 @@ public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBindin
         bindingView.include.viewStatus.setLayoutParams(layoutParams);
     }
 
+    @Override
+    public Class<MainViewModel> getViewModelClass() {
+        return MainViewModel.class;
+    }
+
     private void initView() {
         setNoTitle();
         setSupportActionBar(bindingView.include.toolbar);

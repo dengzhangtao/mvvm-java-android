@@ -43,6 +43,11 @@ public class MyCoinActivity extends BaseActivity<NoViewModel, ActivityMyCollectB
         bindingView.vpMyCollect.setCurrentItem(isBank ? 1 : 0);
     }
 
+    @Override
+    public Class<NoViewModel> getViewModelClass() {
+        return NoViewModel.class;
+    }
+
     private void initFragmentList() {
         mTitleList.clear();
         mTitleList.add("我的积分");

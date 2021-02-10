@@ -37,6 +37,11 @@ public class NavDeedBackActivity extends BaseActivity<NoViewModel, ActivityNavDe
         bindingView.tvQqGroupNum.setOnClickListener(listener);
     }
 
+    @Override
+    public Class<NoViewModel> getViewModelClass() {
+        return NoViewModel.class;
+    }
+
     private PerfectClickListener listener = new PerfectClickListener() {
         @Override
         protected void onNoDoubleClick(View v) {

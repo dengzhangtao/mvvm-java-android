@@ -88,12 +88,19 @@ public abstract class BaseActivity<VM extends AndroidViewModel, SV extends ViewD
      * 初始化ViewModel
      */
     private void initViewModel() {
-        Class<VM> viewModelClass = ClassUtil.getViewModel(this);
-        if (viewModelClass != null) {
-            this.viewModel = new ViewModelProvider(this).get(viewModelClass);
+//        Class<VM> viewModelClass = ClassUtil.getViewModel(this);
+//        if (viewModelClass != null) {
+//            this.viewModel = new ViewModelProvider(this).get(viewModelClass);
+//        }
+        if (getViewModelClass() != null) {
+            this.viewModel = new ViewModelProvider(this).get(getViewModelClass());
         }
     }
 
+    /**
+     * 父类不用反射获取泛型的具体类型，仅提供抽象方法，由子类实现。提高性能和安全
+     */
+    public abstract Class<VM> getViewModelClass();
     /**
      * 设置titlebar
      */

@@ -194,4 +194,8 @@ open class MyShareActivity : BaseActivity<WanCenterViewModel, FragmentWanAndroid
         }
     }
 
+    override fun getViewModelClass(): Class<WanCenterViewModel> {
+        return WanCenterViewModel::class.java
+    }
+
 }

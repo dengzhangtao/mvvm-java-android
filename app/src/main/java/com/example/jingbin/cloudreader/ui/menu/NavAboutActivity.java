@@ -46,6 +46,11 @@ public class NavAboutActivity extends BaseActivity<NoViewModel, ActivityNavAbout
         initListener();
     }
 
+    @Override
+    public Class<NoViewModel> getViewModelClass() {
+        return NoViewModel.class;
+    }
+
     private void initListener() {
         bindingView.tvGankio.setOnClickListener(listener);
         bindingView.tvDouban.setOnClickListener(listener);

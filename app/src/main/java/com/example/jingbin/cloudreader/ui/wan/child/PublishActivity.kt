@@ -142,4 +142,8 @@ class PublishActivity : BaseActivity<PublishViewModel, ActivityPublishBinding>()
 //            ActivityCompat.startActivity(context, intent, options.toBundle())
         }
     }
+
+    override fun getViewModelClass(): Class<PublishViewModel> {
+        return PublishViewModel::class.java
+    }
 }

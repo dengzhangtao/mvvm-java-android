@@ -33,6 +33,11 @@ public class DoubanTopActivity extends BaseActivity<DoubanTopViewModel, Activity
         loadDouBanTop250();
     }
 
+    @Override
+    public Class<DoubanTopViewModel> getViewModelClass() {
+        return DoubanTopViewModel.class;
+    }
+
     private void initRecyclerView() {
         mDouBanTopAdapter = new DouBanTopAdapter(this);
         bindingView.xrvTop.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
